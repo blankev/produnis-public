@@ -133,7 +133,7 @@ INSERT INTO `procedure_order_code` (`procedure_order_id`, `procedure_order_seq`,
 --
 
 INSERT INTO `procedure_providers` (`ppid`, `name`, `npi`, `protocol`, `login`, `password`, `orders_path`, `results_path`, `notes`, `remote_host`, `send_app_id`, `send_fac_id`, `recv_app_id`, `recv_fac_id`, `DorP`) VALUES
-(1, xl('General Prcatitioner'), '', 'DL', '', '', '', '', '', '', '', '', '', '', 'D'),
+(1, xl('General Practitioner'), '', 'DL', '', '', '', '', '', '', '', '', '', '', 'D'),
 (2, xl('Laboratorium Clinic'), '', 'DL', '', '', '', '', '', '', '', '', '', '', 'D');
 
 --
