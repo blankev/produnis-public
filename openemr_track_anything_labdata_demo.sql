@@ -27,10 +27,10 @@ SET time_zone = "+00:00";
 INSERT INTO `forms` (`id`, `date`, `encounter`, `form_name`, `form_id`, `pid`, `user`, `groupname`, `authorized`, `deleted`, `formdir`) VALUES
 (96, '2014-03-19 09:09:14', 16, 'Track: 24h Urin', 20, 2, 'produnis', 'Default', 1, 0, 'track_anything'),
 (97, '2014-03-19 09:13:05', 36, 'Track: 24h Urin', 21, 2, 'produnis', 'Default', 1, 0, 'track_anything'),
-(98, '2014-03-19 10:53:24', 40, 'Track: Gloodglucose', 22, 2, 'produnis', 'Default', 1, 0, 'track_anything'),
-(99, '2014-03-19 10:55:32', 41, 'Track: Gloodglucose', 23, 2, 'produnis', 'Default', 1, 0, 'track_anything'),
-(101, '2014-03-19 14:37:35', 36, 'Track: Gloodglucose', 25, 2, 'produnis', 'Default', 1, 0, 'track_anything'),
-(100, '2014-03-19 10:56:56', 69, 'Track: Gloodglucose', 24, 2, 'produnis', 'Default', 1, 0, 'track_anything');
+(98, '2014-03-19 10:53:24', 40, 'Track: Bloodglucose', 22, 2, 'produnis', 'Default', 1, 0, 'track_anything'),
+(99, '2014-03-19 10:55:32', 41, 'Track: Bloodglucose', 23, 2, 'produnis', 'Default', 1, 0, 'track_anything'),
+(101, '2014-03-19 14:37:35', 36, 'Track: Bloodglucose', 25, 2, 'produnis', 'Default', 1, 0, 'track_anything'),
+(100, '2014-03-19 10:56:56', 69, 'Track: Bloodglucose', 24, 2, 'produnis', 'Default', 1, 0, 'track_anything');
 
 --
 -- Daten für Tabelle `form_track_anything`
