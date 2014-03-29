@@ -25,12 +25,12 @@ SET time_zone = "+00:00";
 --
 
 INSERT INTO `forms` (`id`, `date`, `encounter`, `form_name`, `form_id`, `pid`, `user`, `groupname`, `authorized`, `deleted`, `formdir`) VALUES
-(96, '2014-03-19 09:09:14', 16, 'Track: 24h Urin', 20, 2, 'produnis', 'Default', 1, 0, 'track_anything'),
-(97, '2014-03-19 09:13:05', 36, 'Track: 24h Urin', 21, 2, 'produnis', 'Default', 1, 0, 'track_anything'),
-(98, '2014-03-19 10:53:24', 40, 'Track: Bloodglucose', 22, 2, 'produnis', 'Default', 1, 0, 'track_anything'),
-(99, '2014-03-19 10:55:32', 41, 'Track: Bloodglucose', 23, 2, 'produnis', 'Default', 1, 0, 'track_anything'),
-(101, '2014-03-19 14:37:35', 36, 'Track: Bloodglucose', 25, 2, 'produnis', 'Default', 1, 0, 'track_anything'),
-(100, '2014-03-19 10:56:56', 69, 'Track: Bloodglucose', 24, 2, 'produnis', 'Default', 1, 0, 'track_anything');
+(96, '2014-03-19 09:09:14', 16, xl('Track: 24h Urine'), 20, 2, 'produnis', xl('Default'), 1, 0, xl('track_anything')),
+(97, '2014-03-19 09:13:05', 36, xl('Track: 24h Urine'), 21, 2, 'produnis', xl('Default'), 1, 0, xl('track_anything')),
+(98, '2014-03-19 10:53:24', 40, xl('Track: Bloodglucose'), 22, 2, 'produnis', xl('Default'), 1, 0, xl('track_anything')),
+(99, '2014-03-19 10:55:32', 41, xl('Track: Bloodglucose'), 23, 2, 'produnis', xl('Default'), 1, 0, xl('track_anything')),
+(101, '2014-03-19 14:37:35', 36, xl('Track: Bloodglucose'), 25, 2, 'produnis', xl('Default'), 1, 0, xl('track_anything')),
+(100, '2014-03-19 10:56:56', 69, xl('Track: Bloodglucose'), 24, 2, 'produnis', xl('Default'), 1, 0, xl('track_anything'));
 
 --
 -- Daten für Tabelle `form_track_anything`
@@ -105,72 +105,72 @@ INSERT INTO `patient_data` (`id`, `title`, `language`, `financial`, `fname`, `ln
 
 INSERT INTO `procedure_order` (`procedure_order_id`, `provider_id`, `patient_id`, `encounter_id`, `date_collected`, `date_ordered`, `order_priority`, `order_status`, `patient_instructions`, `activity`, `control_id`, `lab_id`, `specimen_type`, `specimen_location`, `specimen_volume`, `date_transmitted`, `clinical_hx`) VALUES
 (5, 2, 2, 19, '2014-02-25 14:32:00', '2014-02-03', '', '', '', 1, 0, 1, '', '', '', NULL, ''),
-(6, 2, 2, 19, '2014-02-25 14:32:00', '2014-02-03', 'high', '', '', 1, 0, 1, '', '', '', NULL, 'Blutuntersuchung beim Hausarzt'),
-(7, 2, 2, 18, '2014-02-25 14:52:00', '2014-02-25', 'normal', 'complete', '', 1, 0, 1, '', '', '', NULL, ''),
-(8, 2, 2, 30, '2014-02-25 19:41:00', '2014-02-18', 'high', '', '', 1, 0, 1, '', '', '', NULL, ''),
-(9, 2, 2, 31, '2014-02-25 19:52:00', '2014-02-06', 'high', '', '', 1, 0, 1, '', '', '', NULL, ''),
-(10, 2, 2, 31, '2014-02-25 19:53:00', '2014-02-06', 'high', '', '', 1, 0, 1, '', '', '', NULL, ''),
-(11, 2, 2, 16, '2014-02-27 14:36:00', '2014-02-25', 'high', 'complete', '', 1, 0, 1, '', '', '', NULL, ''),
-(12, 2, 2, 16, '2014-02-27 14:47:00', '2014-02-24', '', 'pending', '', 1, 0, 1, '', '', '', NULL, '');
+(6, 2, 2, 19, '2014-02-25 14:32:00', '2014-02-03', xl('high'), '', '', 1, 0, 1, '', '', '', NULL, xl('Blood tests by General Practitioner')),
+(7, 2, 2, 18, '2014-02-25 14:52:00', '2014-02-25',xl( 'normal'),xl( 'complete'), '', 1, 0, 1, '', '', '', NULL, ''),
+(8, 2, 2, 30, '2014-02-25 19:41:00', '2014-02-18',xl( 'high'), '', '', 1, 0, 1, '', '', '', NULL, ''),
+(9, 2, 2, 31, '2014-02-25 19:52:00', '2014-02-06', xl('high'), '', '', 1, 0, 1, '', '', '', NULL, ''),
+(10, 2, 2, 31, '2014-02-25 19:53:00', '2014-02-06',xl( 'high'), '', '', 1, 0, 1, '', '', '', NULL, ''),
+(11, 2, 2, 16, '2014-02-27 14:36:00', '2014-02-25', xl('high'), xl('complete'), '', 1, 0, 1, '', '', '', NULL, ''),
+(12, 2, 2, 16, '2014-02-27 14:47:00', '2014-02-24', '', xl('pending'), '', 1, 0, 1, '', '', '', NULL, '');
 
 --
 -- Daten für Tabelle `procedure_order_code`
 --
 
 INSERT INTO `procedure_order_code` (`procedure_order_id`, `procedure_order_seq`, `procedure_code`, `procedure_source`, `procedure_name`, `diagnoses`, `do_not_send`) VALUES
-(4, 1, '', '1', 'Blutabnahme', '', 0),
-(3, 1, '', '1', 'Blutabnahme', '', 0),
-(6, 1, 'Blutabnahme', '1', 'Blutabnahme', '', 0),
-(7, 1, 'Blutabnahme', '1', 'Blutabnahme', '', 0),
-(8, 1, 'Blutabnahme', '1', 'Blutabnahme', '', 0),
-(10, 1, 'Blutabnahme', '1', 'Blutabnahme', '', 0),
-(11, 1, '24hUrin', '1', '24h Urin', '', 0),
-(11, 2, 'Blutabnahme', '1', 'Blutabnahme', '', 0),
-(12, 1, 'Stuhlprobe', '1', 'Stuhlprobe', '', 0);
+(4, 1, '', '1', xl('Blood sample'), '', 0),
+(3, 1, '', '1', xl('Blood sample'), '', 0),
+(6, 1, xl('Bloodsample'), '1', xl('Bloodsample'), '', 0),
+(7, 1, xl('Bloodsample'), '1', xl('Bloodsample'), '', 0),
+(8, 1, xl('Bloodsample'), '1', xl('Bloodsample'), '', 0),
+(10, 1, xl('Bloodsample'), '1', xl('Bloodsample'), '', 0),
+(11, 1, xl('24hUrine'), '1', xl('24h Urine'), '', 0),
+(11, 2,xl('Bloodsample'), '1', xl('Bloodsample'), '', 0),
+(12, 1, xl('Feaces sample'), '1', xl('Feaces sample'), '', 0);
 
 --
 -- Daten für Tabelle `procedure_providers`
 --
 
 INSERT INTO `procedure_providers` (`ppid`, `name`, `npi`, `protocol`, `login`, `password`, `orders_path`, `results_path`, `notes`, `remote_host`, `send_app_id`, `send_fac_id`, `recv_app_id`, `recv_fac_id`, `DorP`) VALUES
-(1, 'Labor Hausarzt', '', 'DL', '', '', '', '', '', '', '', '', '', '', 'D'),
-(2, 'Labor Klinik', '', 'DL', '', '', '', '', '', '', '', '', '', '', 'D');
+(1, xl('General Prcatitioner'), '', 'DL', '', '', '', '', '', '', '', '', '', '', 'D'),
+(2, xl('Laboratorium Clinic'), '', 'DL', '', '', '', '', '', '', '', '', '', '', 'D');
 
 --
 -- Daten für Tabelle `procedure_report`
 --
 
 INSERT INTO `procedure_report` (`procedure_report_id`, `procedure_order_id`, `date_collected`, `date_report`, `source`, `specimen_num`, `report_status`, `review_status`, `procedure_order_seq`, `report_notes`) VALUES
-(4, 7, '2014-02-18 14:53:00', '2014-02-19', 0, 'Blut', 'final', 'reviewed', 1, ''),
-(3, 6, '2014-02-03 14:36:00', '2014-02-03', 0, 'Blut', 'final', 'reviewed', 1, ''),
-(5, 8, '2014-02-18 19:42:00', '2014-02-18', 0, 'Blut', 'final', 'reviewed', 1, ''),
-(6, 10, '2014-02-06 19:53:00', '2014-02-06', 0, 'Blut', 'final', 'reviewed', 1, ''),
-(7, 11, '2014-02-26 14:38:00', '2014-02-26', 0, 'Urin', 'final', 'reviewed', 1, ''),
-(8, 12, '2014-02-24 14:47:00', '2014-02-26', 0, 'Faeces', 'final', 'reviewed', 1, ''),
-(9, 11, '2014-02-25 14:58:00', '2014-02-25', 0, 'Blut', 'prelim', 'reviewed', 2, '');
+(4, 7, '2014-02-18 14:53:00', '2014-02-19', 0, xl('Blood'), xl('final'), xl('reviewed'), 1, ''),
+(3, 6, '2014-02-03 14:36:00', '2014-02-03', 0, xl('Blood'), xl('final'), xl('reviewed'), 1, ''),
+(5, 8, '2014-02-18 19:42:00', '2014-02-18', 0, xl('Blood'), xl('final'), xl('reviewed'), 1, ''),
+(6, 10, '2014-02-06 19:53:00', '2014-02-06', 0, xl('Blood'), xl('final'),xl( 'reviewed'), 1, ''),
+(7, 11, '2014-02-26 14:38:00', '2014-02-26', 0, xl('Urine'), xl('final'), xl('reviewed'), 1, ''),
+(8, 12, '2014-02-24 14:47:00', '2014-02-26', 0, xl('Faeces'), xl('final'), xl('reviewed'), 1, ''),
+(9, 11, '2014-02-25 14:58:00', '2014-02-25', 0, xl('Blood'), xl('prelim'), xl('reviewed'), 2, '');
 
 --
 -- Daten für Tabelle `procedure_result`
 --
 
 INSERT INTO `procedure_result` (`procedure_result_id`, `procedure_report_id`, `date`, `facility`, `units`, `result`, `range`, `abnormal`, `comments`, `document_id`, `result_status`, `result_data_type`, `result_code`, `result_text`) VALUES
-(75, 3, NULL, '', 'g_dl', '12.7', '12.3 - 15.3', 'no', '', 0, 'final', 'S', 'Hglobin', 'Hämoglobin'),
-(74, 3, NULL, '', 'percent', '38', '35 - 45', 'no', '', 0, 'final', 'S', 'Hkrit', 'Hämatokrit'),
-(73, 3, NULL, '', 'units_l', '12', '10 -35', 'no', '', 0, 'final', 'S', 'GPT', 'GPT'),
-(72, 3, NULL, '', 'units_l', '18', '10 - 35', 'no', '', 0, 'final', 'S', 'GOT', 'GOT'),
-(70, 3, NULL, '', 'units_l', '11', '< 40', 'no', '', 0, 'final', 'S', 'GGT', 'Gamma-GT'),
-(67, 3, NULL, '', 'units_l', '4.9', '4.10 - 5.10', 'no', '', 0, 'final', 'S', 'Ery', 'Erythrozyten'),
-(66, 3, NULL, '', 'units_l', '69', '33 - 193', 'no', '', 0, 'final', 'S', 'Fe', 'Eisen'),
-(63, 3, NULL, '', 'units_l', '165', '< 200', '', '', 0, 'final', 'S', 'Chol', 'Cholesterin'),
-(60, 3, NULL, '', 'mg_dl', '< 0.1', '< 0.500', 'no', '', 0, 'final', 'S', 'crP', 'C-reakt. Protein'),
-(59, 3, NULL, '', 'units_l', '78', '55 - 115', 'no', '', 0, 'final', 'S', 'BZ', 'Blutzucker-Serum'),
-(57, 3, NULL, '', 'mg_dl', '0.2', '0.120 - 1.11', 'no', '', 0, 'final', 'S', 'Bilir', 'Bilirubin'),
-(78, 3, NULL, '', 'mg_dl', '0.7', '0.50 - 0.90', 'no', '', 0, 'final', 'S', 'Kreatinin', 'Kreatinin'),
-(80, 3, NULL, '', 'units_l', '9.0', '4.30 - 10.0', 'no', '', 0, 'final', 'S', 'Leukoz', 'Leukozyten'),
-(82, 3, NULL, '', 'pg', '26', '27 - 34', 'low', '', 0, 'final', 'S', 'MCH', 'MCH'),
-(83, 3, NULL, '', 'g_dl', '33', '31.5 - 36', 'no', '', 0, 'final', 'S', 'MCHC', 'MCHC'),
-(84, 3, NULL, '', 'fl', '78', '82 - 101', 'low', '', 0, 'final', 'S', 'MCV', 'MCV'),
-(86, 3, NULL, '', 'units_l', '73', '35 - 104', 'no', '', 0, 'final', 'S', 'alkPhos', 'Phosphatase (alk.)'),
-(93, 3, NULL, '', 'oth', '325', '150 - 400', 'no', '', 0, 'final', 'S', 'Trombz', 'Thrombocyten'),
-(94, 3, NULL, '', 'oth', '1.39', '0.30-2.5/4.0', 'no', '', 0, 'final', 'S', 'TSHbasal', 'TSH basal'),
-(95, 3, NULL, '', 'mg_dl', '290', '300 - 9
+(75, 3, NULL, '', xl('g_dl'), '12.7', '12.3 - 15.3', 'no', '', 0, xl('final'), 'S', 'Hglobin', 'Hämoglobin'),
+(74, 3, NULL, '', xl('percent'), '38', '35 - 45', 'no', '', 0, xl('final'), 'S', 'Hkrit', 'Hämatokrit'),
+(73, 3, NULL, '', xl( 'units_l'), '12', '10 -35', 'no', '', 0, xl('final'), 'S', 'GPT', 'GPT'),
+(72, 3, NULL, '', xl('units_l'), '18', '10 - 35', 'no', '', 0, xl('final'), 'S', 'GOT', 'GOT'),
+(70, 3, NULL, '', xl('units_l'), '11', '< 40', 'no', '', 0, xl('final'), 'S', 'GGT', 'Gamma-GT'),
+(67, 3, NULL, '', xl('units_l'), '4.9', '4.10 - 5.10', 'no', '', 0, xl('final'), 'S', 'Ery', 'Erythrozyten'),
+(66, 3, NULL, '', xl('units_l'), '69', '33 - 193', 'no', '', 0, xl('final'), 'S', 'Fe', 'Eisen'),
+(63, 3, NULL, '', xl('units_l'), '165', '< 200', '', '', 0, xl('final'), 'S', 'Chol', 'Cholesterin'),
+(60, 3, NULL, '', xl('mg_dl'), '< 0.1', '< 0.500', 'no', '', 0, xl('final'), 'S', 'crP', 'C-reakt. Protein'),
+(59, 3, NULL, '', xl( 'units_l'), '78', '55 - 115', 'no', '', 0, xl('final'), 'S', 'BZ', 'Blutzucker-Serum'),
+(57, 3, NULL, '', xl( 'mg_dl'), '0.2', '0.120 - 1.11', 'no', '', 0, xl('final'), 'S', 'Bilir', 'Bilirubin'),
+(78, 3, NULL, '', xl('mg_dl'), '0.7', '0.50 - 0.90', 'no', '', 0, xl('final'), 'S', 'Kreatinin', 'Kreatinin'),
+(80, 3, NULL, '', xl('units_l'), '9.0', '4.30 - 10.0', 'no', '', 0, xl('final'), 'S', 'Leukoz', 'Leukozyten'),
+(82, 3, NULL, '', xl('pg', '26'), '27 - 34', 'low', '', 0, xl('final'), 'S', 'MCH', 'MCH'),
+(83, 3, NULL, '', xl('g_dl'), '33', '31.5 - 36', 'no', '', 0, xl('final'), 'S', 'MCHC', 'MCHC'),
+(84, 3, NULL, '', xl('fl'), '78', '82 - 101', 'low', '', 0, xl('final'), 'S', 'MCV', 'MCV'),
+(86, 3, NULL, '', xl('units_l'), '73', '35 - 104', 'no', '', 0, xl('final'), 'S', 'alkPhos', 'Phosphatase (alk.)'),
+(93, 3, NULL, '', xl('oth'), '325', '150 - 400', 'no', '', 0, xl('final'), 'S', 'Trombz', 'Thrombocyten'),
+(94, 3, NULL, '', xl('oth'), '1.39', '0.30-2.5/4.0', 'no', '', 0, xl('final'), 'S', 'TSHbasal', 'TSH basal'),
+(95, 3, NULL, '', xl('mg_dl'), '290', '300 - 9
