@@ -105,7 +105,7 @@ INSERT INTO `patient_data` (`id`, `title`, `language`, `financial`, `fname`, `ln
 
 INSERT INTO `procedure_order` (`procedure_order_id`, `provider_id`, `patient_id`, `encounter_id`, `date_collected`, `date_ordered`, `order_priority`, `order_status`, `patient_instructions`, `activity`, `control_id`, `lab_id`, `specimen_type`, `specimen_location`, `specimen_volume`, `date_transmitted`, `clinical_hx`) VALUES
 (5, 2, 2, 19, '2014-02-25 14:32:00', '2014-02-03', '', '', '', 1, 0, 1, '', '', '', NULL, ''),
-(6, 2, 2, 19, '2014-02-25 14:32:00', '2014-02-03', xl('high'), '', '', 1, 0, 1, '', '', '', NULL, xl('Blood tests by General Practitioner')),
+(6, 2, 2, 19, '2014-02-25 14:32:00', '2014-02-03', xl('high'), '', '', 1, 0, 1, '', '', '', NULL, xl('Blood tests ') xl('by ') xl('General Practitioner')')),
 (7, 2, 2, 18, '2014-02-25 14:52:00', '2014-02-25',xl( 'normal'),xl( 'complete'), '', 1, 0, 1, '', '', '', NULL, ''),
 (8, 2, 2, 30, '2014-02-25 19:41:00', '2014-02-18',xl( 'high'), '', '', 1, 0, 1, '', '', '', NULL, ''),
 (9, 2, 2, 31, '2014-02-25 19:52:00', '2014-02-06', xl('high'), '', '', 1, 0, 1, '', '', '', NULL, ''),
@@ -124,17 +124,17 @@ INSERT INTO `procedure_order_code` (`procedure_order_id`, `procedure_order_seq`,
 (7, 1, xl('Bloodsample'), '1', xl('Bloodsample'), '', 0),
 (8, 1, xl('Bloodsample'), '1', xl('Bloodsample'), '', 0),
 (10, 1, xl('Bloodsample'), '1', xl('Bloodsample'), '', 0),
-(11, 1, xl('24hUrine'), '1', xl('24h Urine'), '', 0),
+(11, 1, xl('24h Urine'), '1', xl('24h Urine'), '', 0),
 (11, 2,xl('Bloodsample'), '1', xl('Bloodsample'), '', 0),
-(12, 1, xl('Feaces sample'), '1', xl('Feaces sample'), '', 0);
+(12, 1, xl('Feces sample'), '1', xl('Feces sample'), '', 0);
 
 --
 -- Daten für Tabelle `procedure_providers`
 --
 
 INSERT INTO `procedure_providers` (`ppid`, `name`, `npi`, `protocol`, `login`, `password`, `orders_path`, `results_path`, `notes`, `remote_host`, `send_app_id`, `send_fac_id`, `recv_app_id`, `recv_fac_id`, `DorP`) VALUES
-(1, xl('General Practitioner'), '', 'DL', '', '', '', '', '', '', '', '', '', '', 'D'),
-(2, xl('Laboratorium Clinic'), '', 'DL', '', '', '', '', '', '', '', '', '', '', 'D');
+(1, 'General Practitioner', '', 'DL', '', '', '', '', '', '', '', '', '', '', 'D'),
+(2, 'Laboratorium Clinic', '', 'DL', '', '', '', '', '', '', '', '', '', '', 'D');
 
 --
 -- Daten für Tabelle `procedure_report`
